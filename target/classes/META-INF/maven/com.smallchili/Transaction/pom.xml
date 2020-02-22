@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.smallchili</groupId>
+  <artifactId>Transaction</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Transaction</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- junit单元测试 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    
+ <!-- 日志依赖 使用slf4j+logback -->
+    <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.7.12</version>
+    </dependency>
+    <dependency>
+       <groupId>ch.qos.logback</groupId>
+       <artifactId>logback-core</artifactId>
+       <version>1.1.1</version>
+    </dependency>
+    <!-- 实现slf4j接口并整合 -->
+    <dependency>
+       <groupId>ch.qos.logback</groupId>
+       <artifactId>logback-classic</artifactId>
+       <version>1.1.1</version>
+    </dependency> 
+    
+ <!-- mysql数据库连接驱动和c3p0连接池 -->
+     <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.35</version>
+         <scope>runtime</scope>
+    </dependency>
+    <dependency>
+       <groupId>c3p0</groupId>
+       <artifactId>c3p0</artifactId>
+       <version>0.9.1.2</version>
+    </dependency>
+    
+   <!-- mybatis相关依赖 -->
+     <dependency>
+         <groupId>org.mybatis</groupId>
+         <artifactId>mybatis</artifactId>
+         <version>3.3.0</version>
+      </dependency>
+      <!-- MyBatis自身实现spring整合的依赖 -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>1.2.3</version>
+    </dependency>
+       
+    <!-- spring依赖 -->
+    <!-- 1.spring核心依赖 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-expression</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency>
+    
+    <!-- spring 测试相关依赖 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency> 
+    
+    <!-- 2.spring dao层依赖 -->
+    
+    <!-- 事务相关 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency>
+    
+  
+  <!-- 一、 使用基于事务声明式事务,事务相关依赖 -->            
+     <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency> 
+    
+  <!-- 二、使用 使用aop-->  
+    <!-- aop联盟的依赖 -->
+    <dependency>
+       <groupId>aopalliance</groupId>
+       <artifactId>aopalliance</artifactId>
+       <version>1.0</version>
+    </dependency>
+    <dependency><!-- spring的aop依赖 -->
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency> 
+    
+  <!-- 三、使用 aspectj-->  
+   <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.2</version>
+   </dependency>
+   <dependency><!-- spring整合aspectj的依赖 -->
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>4.1.7.RELEASE</version>
+    </dependency> 
+  </dependencies>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smallchili.Transaction.dao.PersonDao">
+   <update id="outMoney">
+     update 
+       person
+     set
+       money = money - #{money}
+     where  money >= 0
+     and money >= #{money}   
+     and id = #{outId}  
+   </update>
+   
+   <update id="inMoney">
+     update 
+       person
+     set
+       money = money + #{money}
+     where id = #{inId}
+   </update>
+</mapper>  
