@@ -1,0 +1,2 @@
+使用mybatis+spring 简单地记录spring声明式事务的三种实现方式，工程有三个配置文件applicationContext.xml,
+applicationContext2.xml,applicationContext3.xml对应的是三种不同方式。
